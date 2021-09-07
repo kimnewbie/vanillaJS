@@ -49,9 +49,33 @@ li {
 	</ul>
 	<p id="portfolio">portfolio</p>
 </div>
-<script>
+<script> 
+	/* Class이름으로 접근
+	var liList = document.getElementsByClassName("html");
+	console.log(liList);  // NodeList object 배열
+	console.log(liList[0]); // Node object 배열자
+	liList[0].style.background="#666";
+	*/
+	/* TagName으로 접근
+	var liList = document.getElementsByTagName("li");
+	console.log(liList);
+	var array = new Array("one", "two", "three", "four");
+	console.log(array);
+	for(var i=0; i<10; i++){
+		console.log(i);
+		liList[i].style.background="#666";
+	}
+	*/
+	/*  Id으로 접근
 	//document.getElementById(id)
-	var tutorial = document.getElementById("#tutorial");
+	var n = 0;
+	console.log(n);
+	n = 10;
+	console.log(n);
+	
+	var tutorial = document.getElementById("tutorial"); // 참조 형식
+	tutorial.style.background="#666"; // 색 변경 가능
+	*/
 </script>
 </body>
 </html>
