@@ -50,6 +50,51 @@ li {
 	<p id="portfolio">portfolio</p>
 </div>
 <script> 
+	/* 여러 방식으로의 노드에 접근 */
+	/*
+	var cont = document.querySelector("#tutorial");
+	var contLi = cont.childNodes; // space bar 까지도 text로 봄
+	console.log(contLi);
+	// 9) 하위 HTML 노드에 접근
+	var contLi2 = cont.children;
+	console.log(contLi2);
+	// 10) 하위 처음 노드에 접근
+	var firstLi = cont.firstChild;
+	console.log(firstLi); // #text
+	// 11) 하위 처음 HTML 노드에 접근
+	var firstLi2 = cont.firstElementChild;
+	console.log(firstLi2);
+	// 12) 하위 마지막 노드에 접근
+	var lastLi = cont.lastChild;
+	console.log(lastLi); // #text
+	// 13) 하위 마지막 HTML 노드에 접근
+	var lastLi2 = cont.lastElementChild;
+	console.log(lastLi2); // <li class="blank"></li>
+	// 14) 이전 노드에 접근
+	var css = document.querySelector(".css"); // A Node object
+	var css2 = document.getElementsByClassName("css"); // A NodeList object
+	var previous = css.previousSibling; // #text
+	console.log(previous);
+	var previous2 = css.previousElementSibling; // #text
+	console.log(previous2);
+	*/
+	/*
+	var html = document.querySelector(".html");
+	var contUl = html.parentNode;
+	var contUl2 = html.parentElement; // 두 개가 같음
+	console.log(contUl);
+	console.log(contUl2);
+	*/
+	/* li[i].textContent === li[i].innerText
+	var li = document.querySelector("#tutorial > li");
+	li.style.background = "#666"; // 첫번째 노드만 지정 (모든 요소로는 querySelectorAll)
+	var liAll = document.querySelectorAll("#tutorial > li");
+	for(var i=0; i<liAll.length; i++){
+		if(liAll[i].textContent === "HTML" || liAll[i].textContent === "CSS"){
+			liAll[i].style.background = "#666";
+		}
+	}
+	*/
 	/* Class이름으로 접근
 	var liList = document.getElementsByClassName("html");
 	console.log(liList);  // NodeList object 배열
@@ -72,7 +117,6 @@ li {
 	console.log(n);
 	n = 10;
 	console.log(n);
-	
 	var tutorial = document.getElementById("tutorial"); // 참조 형식
 	tutorial.style.background="#666"; // 색 변경 가능
 	*/
